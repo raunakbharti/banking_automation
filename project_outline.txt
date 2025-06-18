@@ -1,0 +1,111 @@
+nitishpokhriyal1@gmail.com
+Project category
+	desktop project
+Project Title
+	Banking Automation
+User Types
+	user
+	admin
+
+Roles of Admin:
+---------------------
+	1.Opening user account
+	2.Closing user account
+	3.View user accounts
+
+Roles of User:
+------------------
+	1.login(authentication)
+	2.recover password
+	3.updating profile picture
+	4.updating account details(password,mobile,email)
+	5.deposit
+	6.withdraw
+	7.transfer
+	8.history
+	9.balance check
+Front End Libraries
+	tkinter(standard library)
+	pillow(3rd party)
+BackEnd(database)
+	sqlite
+
+Tables:
+---------
+	1.accounts
+		accounts_acno		integer primary key autoincrement
+		accounts_name		text
+		accounts_pass		text
+		accounts_email		text
+		accounts_mob		text
+		accounts_gender		text
+		accounts_opendate	text
+		accounts_bal		float
+	
+	2.stmts
+		stmts_acn		integer
+		stmts_amt		float
+		stmts_type		text
+		stmts_date		text
+		stmts_update_bal		float
+		stmts_txnid		text	primary key
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+winner_batorfield =
+IF(All_matches[toss_decision]="bat" && All_matches   [toss_winner]=All_matches[winner],"bat",
+IF(All_matches[toss_decision]="field" && All_matches[toss_winner]=All_matches[winner],"field",
+IF(All_matches[toss_decision]="bat" && All_matches[toss_winner]<>All_matches[winner],"field",
+IF(All_matches[toss_decision]="field" && All_matches[toss_winner]<>All_matches[winner],"bat")
+)))
+
+
+TeamScores = 
+var ValidMatches=FILTER(ball_by_ball,RELATED(All_matches[result])<>"no result"&&RELATED(All_matches[method])<>"D/L")
+
+RETURN SUMMARIZE(ValidMatches,ball_by_ball[match_id],ball_by_ball[batting_team],All_matches[Match_Year],"Total Runs",SUM(ball_by_ball[total_runs]))
+
+MaxScoreTeam = 
+var max_runs=MAX(TeamScores[Total Runs])
+var team=LOOKUPVALUE(TeamScores[batting_team],TeamScores[Total Runs],max_runs)
+var year=LOOKUPVALUE(TeamScores[Match_Year],TeamScores[Total Runs],max_runs)
+RETURN max_runs&","&team&" "&year
+
+MinScoreTeam = 
+var min_runs=MIN(TeamScores[Total Runs])
+var team=LOOKUPVALUE(TeamScores[batting_team],TeamScores[Total Runs],min_runs)
+var year=LOOKUPVALUE(TeamScores[Match_Year],TeamScores[Total Runs],min_runs)
+RETURN min_runs&","&team&" "&year
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
